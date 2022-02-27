@@ -326,41 +326,33 @@
 					<h2 class='section-title'>Projects</h2>
 					<section id="projects">
 						{{#each resume.projects}}
-							<div cla
-							<header>
+									{{#each images}}
+									    {{#if url}}
+									    	<img src="{{url}}"/>
+										{{/if}}
+									{{/each}}
 								{{#if name}}
+							<div class="content">
+						    <div class="item">
+								<header>
 									<h3 class="name">
 										{{name}}
 									</h3>
-								{{/if}}
 								</header>
-								{{#if name}}
-								<span class="name">
-									{{#if url}}
-									<span class="url">
-										<a href="{{url}}">{{name}}</a>
-									</span>
-									{{else}}
-										{{name}}
-									{{/if}}
-								</span>
+							{{/if}}
+						    <div class="item">
+								{{#if link}}
+									<div class="website">
+										<a href="{{link}}">{{link}}</a>
+									</div>
 								{{/if}}
 								{{#if description}}
-									<span class="publisher">
-										in {{publisher}},
-									</span>
-								{{/if}}
-								{{#if releaseDate}}
-									<span class="date">
-										{{DMY releaseDate}}
-									</span>
-								{{/if}}
-								{{#if summary}}
-								<div class="summary">
-									<p>{{{summary}}}</p>
+								<div class="description">
+									<em>{{{description}}}</em>
 								</div>
 								{{/if}}
 							</div>
+                            </div>
 						{{/each}}
 					</section>
 				</section>
@@ -372,21 +364,23 @@
 					<h2 class='section-title'>Publications</h2>
 					<section id="publications">
 						{{#each resume.publications}}
-							<div class="item">
-								{{#if name}}
-								<span class="name">
-									{{#if website}}
-									<span class="website">
-										<a href="{{website}}">{{name}}</a>
-									</span>
-									{{else}}
+							{{#if name}}
+								<header>
+									<h3 class="name">
 										{{name}}
-									{{/if}}
-								</span>
+									</h3>
+								</header>
+							{{/if}}
+							<div class="item">
+								{{#if website}}
+									<span class="website">
+										<a href="{{website}}">{{website}}</a>
+									</span>
 								{{/if}}
+								<div class="publisher-date">
 								{{#if publisher}}
-									<span class="publisher">
-										in {{publisher}},
+									<class="publisher">
+										{{publisher}},
 									</span>
 								{{/if}}
 								{{#if releaseDate}}
@@ -394,9 +388,10 @@
 										{{DMY releaseDate}}
 									</span>
 								{{/if}}
+								</div>
 								{{#if summary}}
 								<div class="summary">
-									<p>{{{summary}}}</p>
+									<em>{{{summary}}}</em>
 								</div>
 								{{/if}}
 							</div>

@@ -75,8 +75,8 @@ ul {
 	margin-top: 1em;
 }
 div.item {
-	margin: 1em 0 2em;
-	padding-bottom: 2em;
+	margin: 1em 0 1em;
+	padding-bottom: 1em;
 }
 div.item:last-of-type {
 	margin: 0;
@@ -246,9 +246,16 @@ h2.section-title {
 	margin-top: 0.5em;
 }
 
-#publications .name {
-	font-style: italic;
+#projects img{
+	display: block;
+	height: 2em;
+	border-radius: 0.1em;
+	float: right;
 }
+
+/* #publications .name {
+	font-style: italic;
+} */
 
 /*.courses li,*/ .keywords li{
 	display: inline-block;
@@ -436,10 +443,7 @@ h2.section-title {
 
 	#resume {
 		width: 700px;
-		padding: 3em;
-		margin: 3em auto;
 		background: #fff;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 	}
 
 	.section {
@@ -495,7 +499,7 @@ h2.section-title {
 	#profiles .item{
 		padding-bottom: 1em;
 	}
-
+	
 	div {
 		padding: 0;
 	}
